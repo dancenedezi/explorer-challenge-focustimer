@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #fff;
+  --text-color: rgb(13, 200, 252);
+  --bg-button: hsla(240, 9%, 89%, 1);
+  --bg-button-active: rgb(13, 200, 252);
+  --text-button-active: #fff;
+
+  font-size: 62.5%;
+}
+
+.dark {
+  --bg-color: rgb(19, 19, 21);
+  --text-color: rgb(13, 200, 252);
+  --bg-button: rgb(54, 54, 60);
+  --text-button-active: rgb(54, 54, 60);
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: sans-serif;
+  background-color: var(--bg-color);
+}
+
+#app {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  align-items: center;
+  place-content: center;
+  gap: clamp(5rem, 10rem, 19.2rem);
+
+  height: 100vh;
+  color: var(--text-color);
+}
+
+#toggle-mode {
+  position: absolute;
+  top: 3.2rem;
+  right: 3.2rem;
+}
+
+#toggle-mode button {
+  background-color: transparent;
+  border: none;
+  font-size: 6rem;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.timer {
+  display: flex;
+  flex-direction: column;
+}
+
+#counter span {
+  font-size: 12rem;
+  font-weight: 500;
+}
+
+#controls {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+#controls button {
+  background-color: transparent;
+  border: none;
+
+  font-size: 4.8rem;
+  color: var(--text-color);
+
+  cursor: pointer;
+}
+
+#sound-controls {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: 3.2rem;
+}
+
+#sound-controls button {
+  width: 13.8rem;
+  height: 15.2rem;
+
+  font-size: 5rem;
+  color: var(--text-color);
+
+  background-color: var(--bg-button);
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+#sound-controls button.active {
+  background-color: var(--bg-button-active);
+  color: var(--text-button-active);
+}
+
+.running .ph-play-circle,
+html:not(.running) .ph-pause-circle,
+.dark .ph-moon,
+html:not(.dark) .ph-sun {
+  display: none;
+}
+
+.running .twopoints {
+  animation: blick 1000ms infinite;
+}
+
+@keyframes blick {
+  0%, 50% {
+    color: var(--text-color);
+  }
+
+  51%, 100% {
+    color: transparent;
+  }
+}
+
+@media (max-width: 810px) {
+  #app {
+    grid-template-columns: max-content;
+    align-items: center;
+    place-content: center;
+  }
+}
+

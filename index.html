@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FocusTimer 2.0</title>
+
+  <link rel="shortcut icon" href="./assets/img/favicon.svg" type="image/x-svg">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  
+</head>
+<body>
+  <div id="app">
+    <div id="toggle-mode">
+      <button class="ph-bold ph-sun"></button>
+      <button class="ph-bold ph-moon"></button>
+    </div>
+
+    <div class="timer">
+      <section id="counter">
+        <span id="minutes">25</span>
+        <span class="twopoints">:</span>
+        <span id="seconds">00</span>
+      </section>
+
+      <section id="controls">
+        <button class="ph-bold ph-play-circle" data-action="toggleRunning"></button>
+        <button class="ph-bold ph-pause-circle" data-action="toggleRunning"></button>
+        <button class="ph-bold ph-stop-circle" data-action="reset"></button>
+        <button class="ph-bold ph-plus-circle add" data-action="timeSetting"></button>
+        <button class="ph-bold ph-minus-circle decrease" data-action="timeSetting"></button>
+      </section>
+    </div>
+    <div id="sound-controls">
+      <button class="ph-bold ph-tree-evergreen" data-sound="forest"></button>
+      <button class="ph-bold ph-cloud-rain" data-sound="rain"></button>
+      <button class="ph-bold ph-storefront" data-sound="coffeeShop"></button>
+      <button class="ph-bold ph-fire" data-sound="fireplace"></button>
+    </div>
+  </div>
+  <script src="./src/main.js" type="module"></script>
+</body>
+</html>
