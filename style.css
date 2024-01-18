@@ -130,7 +130,7 @@ html:not(.dark) .ph-sun {
     align-items: center;
     place-content: center;
 
-    overflow: hidden;
+    height: 100%
   }
 }
 
