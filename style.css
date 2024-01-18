@@ -125,12 +125,14 @@ html:not(.dark) .ph-sun {
 }
 
 @media (max-width: 810px) {
+  body {
+    overflow: hidden;
+  }
+  
   #app {
     grid-template-columns: max-content;
     align-items: center;
     place-content: center;
-
-    height: 100%
   }
 }
 
