@@ -129,6 +129,8 @@ html:not(.dark) .ph-sun {
     grid-template-columns: max-content;
     align-items: center;
     place-content: center;
+
+    overflow: hidden;
   }
 }
 
